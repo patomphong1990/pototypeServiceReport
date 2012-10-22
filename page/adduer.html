@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:12px;
+}
+
+legend{
+	color:#666666;
+}
+
+input{
+	border:1px solid #666666;
+}
+
+input[type="text"]{
+	width:200px;
+	height:13px;
+	font-size:8pt;
+}
+
+input[type="password"]{
+	width:200px;
+	height:13px;
+	font-size:8pt;
+}
+
+input[type="image"]{
+	position:relative; 
+	top:5px;
+}
+
+td{
+	height:25px;
+	color:#666666;
+}
+
+</style>
+<script language="javascript">
+	var field = 1;
+	function fncCreateElement(){
+		if(field <= 5){
+			var mySpan = document.getElementById('add_text');
+			var myElement1 = document.createElement('input');
+			myElement1.setAttribute('type', 'text');
+			myElement1.setAttribute('name', 'txtSiteName[]');
+			myElement1.setAttribute('id',"txt1");
+			mySpan.appendChild(myElement1);
+			
+			var mySpan = document.getElementById('add_text');
+			var myElement1 = document.createElement('input');
+			myElement1.setAttribute('type', 'text');
+			myElement1.setAttribute('name', 'txtSiteName[]');
+			myElement1.setAttribute('id',"txt1");
+			mySpan.appendChild(myElement1);
+			mySpan.appendChild(document.createElement('br'));
+			field++;
+		}
+		if(field == 6){
+			document.form1.add_sym_action.disabled = true;
+		}
+	}
+</script>
+</head>
+<body>
+<table border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td>
+    	<fieldset>
+        	<legend>Add User</legend>
+            <form name="form1" action="#">
+            	<table>
+            	<tr>
+                	<td>Employee ID : </td>
+                    <td><input type="text" name="contract_no"></td>
+                </tr>
+                <tr>
+                	<td>Password : </td>
+                    <td><input type="password" name="project_name"></td>
+                </tr>
+                <tr>
+                	<td>Confirm Password : </td>
+                    <td><input type="password" name="company_name"></td>
+                </tr>
+                <tr>
+                	<td>Address : </td>
+                    <td><input type="text" name="company_address"></td>
+                </tr>
+                <tr>
+                	<td>Telephone : </td>
+                    <td><input type="text" name="contact_telephone"></td>
+                </tr>
+                <tr>
+                	<td>Email : </td>
+                    <td><input type="text" name="contact_email"></td>
+                </tr>
+                <tr>
+                	<td>Authority :  </td>
+                    <td>
+                    	<input type="radio" name="authority" checked="checked"> Users
+                        <input type="radio" name="authority"> Admin
+                    </td>
+                </tr>
+                
+                <tr>
+                	<td colspan="2" align="center"><input type="submit" name="submit" value="Save"> <input type="reset" name="cancel" value="Cancel">
+					</td>
+                </tr>
+            </table>
+            </form>
+        </fieldset>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

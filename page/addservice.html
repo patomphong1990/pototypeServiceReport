@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	font-size:12px;
+}
+
+legend{
+	color:#666666;
+}
+
+input{
+	border:1px solid #666666;
+}
+
+input[type="text"]{
+	width:220px;
+	height:13px;
+	font-size:8pt;
+}
+
+select{
+	width:230px;
+	height:15px;
+	font-size:8pt;
+	border:1px solid #666666;
+}
+
+input[type="image"]{
+	position:relative; 
+	top:5px;
+}
+
+td{
+	height:25px;
+	color:#666666;
+}
+
+.button_add{
+	color:#ffffff;
+	background-color:#339900;
+}
+
+</style>
+<script language="javascript">
+	var field = 1;
+	function fncCreateElement(){
+		if(field <= 10){
+			var mySpan = document.getElementById('add_text');
+			var myElement1 = document.createElement('input');
+			myElement1.setAttribute('type', 'text');
+			myElement1.setAttribute('value', ' >  ');
+			myElement1.setAttribute('name', 'txtSiteName[]');
+			myElement1.setAttribute('id',"txt1");
+			mySpan.appendChild(myElement1);
+			
+			var mySpan = document.getElementById('add_text');
+			var myElement1 = document.createElement('input');
+			myElement1.setAttribute('type', 'text');
+			myElement1.setAttribute('value', ' >  ');
+			myElement1.setAttribute('name', 'txtSiteName[]');
+			myElement1.setAttribute('id',"txt1");
+			mySpan.appendChild(myElement1);
+			mySpan.appendChild(document.createElement('br'));
+			field++;
+		}
+		if(field == 11){
+			document.form1.add_sym_action.style.backgroundColor = "red";
+			document.form1.add_sym_action.disabled = true;
+			document.form1.add_sym_action.value = "Full";
+		}
+	}
+</script>
+</head>
+<body>
+<table width="680" border="0" cellpadding="0" cellspacing="0" align="center">
+  <tr>
+    <td>
+    <form name="form1" action="#">
+    	<fieldset>
+        	<fieldset>
+            	<legend> Contract</legend>
+                <table>
+                	<tr>
+                		<td>Contract : </td>
+                    	<td>
+                    		<select>
+                        		<option> - - Select Contract - - </option>
+                        		</select>
+                    	</td>
+                        <td></td><td></td>
+                	</tr>
+                    <tr>
+                    	<td>Company : </td>
+                        <td><input type="text" name="company" disabled="true"></td>
+                        <td>Address : </td>
+                        <td><input type="text" name="company" disabled="true"></td>
+                    </tr>
+                    <tr>
+                    	<td>Project : </td>
+                        <td><input type="text" name="project" disabled="true"></td>
+                        <td>Contract Person : </td>
+                        <td><input type="text" name="contract_person" disabled="true"></td>
+                    </tr>
+                    <tr>
+                    	<td>Email : </td>
+                        <td><input type="text" name="email" disabled="true"></td>
+                        <td>Telephone : </td>
+                        <td><input type="text" name="telephone" disabled="true"></td>
+                    </tr>
+                </table>
+            </fieldset><br/><br/>
+            
+            <!-- Service -->
+            <fieldset>
+            	<legend> Service </legend>
+            			<table>
+                			<tr>
+                				<td>Service Location : </td>
+                    			<td><input type="text" name="service_location"></td>
+                			</tr>
+                			<tr>
+                				<td align="center">Symptom<br/> & <br/>Action : </td>
+                  				<td width="500">
+                    				<div id="add_text"><br/>
+                        				<input type="text" value="Symptom" disabled="true" style="border:1px solid #666666; background-color:#CCCCCC; text-align:center;"><input 
+                                        type="text" value="Action" disabled="true" style="border:1px solid #666666; background-color:#CCCCCC; text-align:center;">
+                      				</div>
+                        				<input type="button" name="add_sym_action" value="Add" class="button_add" onclick="fncCreateElement()">
+                  				</td>
+                			</tr>
+                			<tr>
+                				<td>Manday : </td>
+                    			<td><input type="text" name="manday"></td>
+                			</tr>
+                			<tr>
+               					<td>Start Service : </td>
+                    			<td><input type="text" name="start_service" style="width:100px;"> <input type="image" src="../image/calendar.png" onclick=""></td>
+               				</tr>
+                			<tr>
+               					<td>Stop Service : </td>
+                    			<td><input type="text" name="stop_service" style="width:100px;"> <input type="image" src="../image/calendar.png" onclick=""></td>
+                			</tr>
+                			<tr>
+                				<td>Assing To :</td>
+                    			<td><input type="text" name="assing_to"></td>
+                			</tr>
+                			<tr>
+                				<td>Close By :</td>
+                    			<td><input type="text" name="close_by"></td>
+                			</tr>
+                			<tr>
+                				<td colspan="2" align="center"><input type="submit" name="submit" value="Save"> <input type="reset" name="cancel" value="Cancel"></td>
+                			</tr>
+            			</table>
+            </fieldset>
+        </fieldset>
+    </form>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
